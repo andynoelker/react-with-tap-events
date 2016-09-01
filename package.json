@@ -4,8 +4,7 @@
   "description": "Patch react with tap events",
   "main": "src/react-patch.js",
   "scripts": {
-    "build": "webpack --progress --colors --watch",
-    "start": "webpack-dev-server --progress --colors"
+    "build": "./node_modules/.bin/webpack"
   },
   "author": "Matt Hartman",
   "contributors": [
