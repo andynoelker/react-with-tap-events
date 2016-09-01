@@ -1,5 +1,4 @@
-var React = require("react/addons");
-React.initializeTouchEvents(true);
+var React = require("react/lib/ReactWithAddonsUMDEntry");
 
 const injectTapEventPlugin = require('react-tap-event-plugin');
 injectTapEventPlugin();

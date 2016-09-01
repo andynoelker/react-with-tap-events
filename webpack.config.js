@@ -1,5 +1,4 @@
 var webpack = require('webpack');
-var webpackDevServer = require('webpack-dev-server');
 
 module.exports = {
   entry: {
@@ -7,9 +6,8 @@ module.exports = {
   },
   output: {
     libraryTarget: 'var',
-    library: '[name]',
+    library: 'React',
     path: __dirname + '/build/',
-    publicPath: 'http://localhost:8080/build/',
     filename: 'react-with-addons.js',
   },
   devtools: 'eval',
