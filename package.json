@@ -4,6 +4,7 @@
   "description": "Patch react with tap events",
   "main": "src/react-patch.js",
   "scripts": {
+    "start": "./node_modules/.bin/webpack && node server.js",
     "build": "./node_modules/.bin/webpack"
   },
   "author": "Matt Hartman",
@@ -19,6 +20,7 @@
     "webpack": "1.13.2"
   },
   "dependencies": {
+    "express": "4.14.0",
     "react-tap-event-plugin": "^1.0.0"
   }
 }
