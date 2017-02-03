@@ -1,6 +1,8 @@
 var webpack = require('webpack');
 
-module.exports = {
+var env = process.env.NODE_ENV;
+
+var config = {
   entry: {
     React: ['./src/react-patch.js'],
   },
@@ -11,5 +13,21 @@ module.exports = {
     filename: 'react-with-addons.js',
   },
   devtools: 'eval',
-  plugins: [],
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify(env)
+    })
+  ],
 };
+
+if (env === 'production') {
+  config.plugins.push(
+    new webpack.optimize.UglifyJsPlugin({
+      compress:{
+        warnings: false 
+      }
+    })
+  );
+}
+
+module.exports = config;

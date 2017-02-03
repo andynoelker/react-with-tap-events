@@ -5,7 +5,8 @@
   "main": "src/react-patch.js",
   "scripts": {
     "start": "./node_modules/.bin/webpack && node server.js",
-    "build": "./node_modules/.bin/webpack"
+    "build": "./node_modules/.bin/webpack",
+    "build:min": "cross-env NODE_ENV=production ./node_modules/.bin/webpack"
   },
   "author": "Matt Hartman",
   "contributors": [
@@ -16,9 +17,10 @@
   ],
   "license": "ISC",
   "dependencies": {
-    "react": "15.3.1",
-    "webpack": "1.13.2",
+    "cross-env": "^3.1.4",
     "express": "4.14.0",
-    "react-tap-event-plugin": "^1.0.0"
+    "react": "15.3.1",
+    "react-tap-event-plugin": "^1.0.0",
+    "webpack": "1.13.2"
   }
 }
